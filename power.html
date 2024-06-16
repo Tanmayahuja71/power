@@ -32,8 +32,8 @@
             }
             const base = parseFloat(num1);
             const exponent = parseFloat(num2);
-            if (base > 25 || exponent > 25) {
-                document.getElementById('error').textContent = 'Numbers should be greater than or equal to 25.';
+            if (base < 0 || base > 25 || exponent < 0 || exponent > 25) {
+                document.getElementById('error').textContent = 'Numbers must be between 0 and 25 (inclusive).';
                 return;
             }
             let result = 1;
